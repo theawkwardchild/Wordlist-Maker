@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wordlistscraper;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,13 +10,7 @@ import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -90,7 +77,7 @@ public class PageParser {
         sourceIndex = source.indexOf("title=\"", sourceIndex);
         sourceIndex = source.indexOf("title=\"", sourceIndex + 1);
        
-        Path file = Paths.get("show-lists-all.txt");
+       // Path file = Paths.get("show-lists-all.txt");
         int x = 0;
         while (source.indexOf("title=\"", sourceIndex) != -1 && x++ < 3500) {
             ArrayList<String> list = new ArrayList<>();
